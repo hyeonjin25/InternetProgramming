@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>display 속성</title>
+  <style>
+    .menubar li{
+      display: inline;
+      background-color: yellow;
+      border: 1px solid;
+      border-color: red;
+      margin: 0;
+      padding: 5em;
+    }
+    #one{
+      background-color: cyan;
+      width: 200px;
+      height: 50px;
+    }
+    #two{
+      position: static;
+      background-color: yellow;
+      width: 200px;
+      height: 50px;
+    }
+    #t2 #two{
+      position: relative;
+      left:30px;
+      background-color: yellow;
+      width: 200px;
+      height: 50px;
+    }
+    #t3 #two{
+      position: absolute;
+      top: 560px;
+      left:30px;
+      background-color: yellow;
+      width: 200px;
+      height: 50px;
+    }
+    #three{
+      background-color: lightgreen;
+      width: 200px;
+      height: 50px;
+    }
+    #t4 p{
+      background-color: lightgreen;
+      width: 200px;
+      height: 50px;
+    }
+    #t4 #two{
+      background-color: yellow;
+      position: fixed;
+      top:200px;
+      right: 0px;
+    }
+    #t5 img{
+      float: left;
+      width: 110px;
+      height: 90px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div style="height: 100px;">
+    <ul class='menubar'>
+      <li><a href="#">홈으로</a></li>
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">제품 소개</a></li>
+      <li><a href="#">질문과 대답</a></li>
+      <li><a href="#">연락처</a></li>
+    </ul>
+  </div>
+
+  <div id="t1">
+    <p id="one">block #1</p>
+    <div id="two">
+      block#2<br/>
+      position:static;<br/>
+    </div>
+    <p id="three">block #3</p>
+  </div>
+  <div id="t2">
+    <p id="one">block #1</p>
+    <div id="two">
+      block#2<br/>
+      position:static;<br/>
+    </div>
+    <p id="three">block #3</p>
+  </div>
+  <div id="t3">
+    <p id="one">block #1</p>
+    <div id="two">
+      block#2<br/>
+      position:static;<br/>
+    </div>
+    <p id="three">block #3</p>
+  </div>
+  <div id="t4">
+    <p>block #1</p>
+    <p id="two">
+      block#2<br/>
+      position:fixed;<br/>
+      top:0px; right:10px;
+    </p>
+    <p>block #3</p>
+    <p>block #4</p>
+    <p>block #5</p>
+    <p>block #6</p>
+    <p>block #7</p>
+    <p>block #8</p>
+    <p>block #9</p>
+    <p>block #10</p>
+    <p>block #11</p>
+  </div>
+  <div id="t5">
+    <h3>이미지 갤러리</h3>
+    <div style="height: 100px; width: 400px;">
+      <img src="sunshine.jpg" width="100" height="90">
+      <img src="lion.jpg" width="100" height="90">
+      <img src="storm.jpg" width="100" height="90">
+    </div>
+    <div>
+      <img src="sunshine.jpg" width="100" height="90">
+      <img src="lion.jpg" width="100" height="90">
+      <img src="storm.jpg" width="100" height="90">
+    </div>
+  </div>
+</body>
+</html>
