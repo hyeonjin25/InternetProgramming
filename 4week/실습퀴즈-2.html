@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>퀴즈2</title>
+  <script>
+    function hwaci(sub){
+      return (sub*1.8)+32;
+    }
+    function table(){
+      for(var i=0; i<11; i++){
+        document.write("<tr>")
+        document.write("<td>"+i+"</td>")
+        document.write("<td>"+hwaci(i)+"</td>")
+        document.write("</tr>")
+      }
+    }
+  </script>
+</head>
+<body>
+  <table border="1px">
+    <tr>
+      <th>섭씨온도</th>
+      <th>화씨온도</th>
+    </tr>
+    <script>table()</script>
+  </table>
+</body>
+</html>
