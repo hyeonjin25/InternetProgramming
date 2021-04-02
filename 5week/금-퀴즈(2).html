@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>2번</title>
+  <script>
+    var ans = 25;
+    var hint = "";
+    var count = 0;
+    function onClick() {
+      count++;
+      var num = document.getElementById('number').value;
+      if(num==ans) hint = "성공입니다."
+      else if(num>ans) hint = "낮습니다."
+      else hint = "높습니다."
+      document.getElementById('hint').value=hint;
+      document.getElementById('count').value=count;
+    }
+  </script>
+</head>
+<body>
+  <h2>숫자 맞추기 게임</h2>
+  <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.</p>
+  숫자:<input id="number" type="text"/><button type="button" onclick="onClick()">확인</button>
+  <br><br>
+  <div>추측횟수:<input id="count" type="text"/>힌트:<input id="hint" type="text"/></div>
+</body>
+</html>

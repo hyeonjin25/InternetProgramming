@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <script>
+    var ans = 25;
+    var hint = "";
+    var count = 0;
+    function onClick() {
+      var first = document.getElementById('first').value;
+      var second = document.getElementById('second').value;
+      var ans = Number(first) + Number(second);
+      document.getElementById('ans').value=ans;
+    }
+  </script>
+</head>
+<body>
+  <h2>덧셈 계산기</h2><br>
+  첫번째 정수:<input id="first" type="text"/><br>
+  두번째 정수:<input id="second" type="text"/><br>
+  합계:<input id="ans" type="text"/><br>
+  <button type="button" onclick="onClick()">계산</button>
+</body>
+</html>
