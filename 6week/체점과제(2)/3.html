@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM 객체 동적 삽입</title>
+  <script>
+    function ans(params) {
+      if(params==1){
+        var n = document.createElement('p');
+        var p = document.getElementById('1');
+        n.innerHTML='백설공주';
+        p.appendChild(n);        
+      }else if(params==2){
+        var n = document.createElement('p');
+        var p = document.getElementById('2');
+        n.innerHTML='둘다';
+        p.appendChild(n);   
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>정답의 동적 삽입</h3>
+  <hr>
+  <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+  <button onclick="ans(1)">답보기</button>
+  <div id="1"></div>
+  <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+  <button onclick="ans(2)">답보기</button>
+  <div id="2"></div>
+</body>
+</html>
