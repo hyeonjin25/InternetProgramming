@@ -6,11 +6,10 @@
 <body id="body">
   <h2>오전이면 lightskyblue, 오후이면 orange 배경</h2>
   <hr>
-  <div id="clock"></div>
   <script>
     var now = new Date();
     var s ="현재 시간 : " + now.getHours() + '시,' + now.getMinutes() + '분,' + now.getSeconds() + '초'
-    document.getElementById('clock').innerHTML=s
+    document.write(s);
     if(now.getHours()>=12) document.getElementById('body').style.backgroundColor='orange'
     else document.getElementById('body').style.backgroundColor='skyblue'
   </script>

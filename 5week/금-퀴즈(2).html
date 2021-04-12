@@ -8,12 +8,15 @@
     var count = 0;
     function onClick() {
       count++;
-      var num = document.getElementById('number').value;
-      if(num==ans) hint = "성공입니다."
-      else if(num>ans) hint = "낮습니다."
-      else hint = "높습니다."
-      document.getElementById('hint').value=hint;
       document.getElementById('count').value=count;
+      try{
+        var num = document.getElementById('number').value;
+        if(num==ans) throw "성공입니다."
+        if(num>ans) throw "낮습니다."
+        if (numans) throw "높습니다."
+      }catch(message){
+        document.getElementById('hint').value=message;
+      }
     }
   </script>
 </head>
