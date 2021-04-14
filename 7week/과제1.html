@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>1번</title>
+  <script>
+    var cost=0;
+    function choose(check) {
+      var price = document.getElementById('price');
+      if(check.checked){
+        cost+=parseInt(check.value);
+      }
+      else{
+        cost-=parseInt(check.value);
+      }
+      price.value = cost;
+    }
+  </script>
+</head>
+<body>
+  <h2>물품을 선택하면 금액이 자동 계산됩니다</h2>
+  <hr>
+    <input type="checkbox" id="hat" value="10000" onchange="choose(this)" > 
+    <label for="hat">모자 1만원</label>  
+    <input type="checkbox" id="shoe" value="30000" onchange="choose(this)"> 
+    <label for="shoe">구두 3만원</label>  
+    <input type="checkbox" id="bag" value="80000" onchange="choose(this)"> 
+    <label for="bag">명품가방 8만원</label> 
+  <div>지불하실 금액 <input type="text" id="price" value="0"/>
+</body>
+</html>
