@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>4번</title>
+  <script>
+    function clicky(myclick) {
+      var image = document.getElementById('image')
+      image.src = myclick.value;
+    }
+  </script>
+</head>
+<body>
+  <h2>라디오 버튼을 클릭하면 이미지를 출력합니다.</h2>
+  <hr>
+  <form>
+    <input type="radio" value="banana.jfif" name="fruit" onclick="clicky(this)" checked>바나나</input>
+    <input type="radio" value="mango.jfif" name="fruit" onclick="clicky(this)" >망고</input>
+    <input type="radio" value="apple.jfif" name="fruit" onclick="clicky(this)" >사과</input>
+  </form>
+  <img src='banana.jfif' id='image' width="300" height="300">
+</body>
+</html>
