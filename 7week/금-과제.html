@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>calculator</title>
+  <script>
+    function keyP(e) {
+      if(e.keyCode==13){
+        document.getElementById('gab').value=eval(e.currentTarget.value)
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>계산기 만들기</h3>
+  <hr>
+  수식을 입력하고 &ltEnter&gt를 입력하세요.<p>
+  식<input type="text" id="sic" value='' onkeypress="keyP(event)"><br>
+  값<input type="text" id="gab" value=''>
+</body>
+</html>
