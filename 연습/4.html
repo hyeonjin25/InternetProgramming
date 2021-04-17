@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>4번</title>
+  <script>
+    var r=0;
+    function row() {
+      r++
+      var par = document.getElementById('tb')
+      var tab = document.createElement('tr')
+      tab.innerHTML='<td>row '+r+', cell 1</td><td>row '+r+', cell 2</td>'
+      par.appendChild(tab);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="row()">add_new_row</button>
+  <button>add_new_col</button>
+  <table border="1px">
+    <thead style="background-color: green;">
+      <tr>
+        <th style="width: 93px;">Header1</th>
+        <th style="width: 93px;">Header1</th> 
+      </tr>
+    </thead>
+    <tbody id="tb">
+    </tbody>
+  </table>
+</body>
+</html>
