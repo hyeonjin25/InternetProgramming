@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>1번</title>
+</head>
+<body>
+    <script>
+        var n = prompt('input a number in range [0,9]')
+        if(n<0||n>9){
+            alert('wrong number!')
+        }
+        else{
+            var s = '<table border="1px">'
+            for(i=1; i<=n; i++){
+                s+='<tr>'
+                for(j=1; j<=n; j++){
+                    s+='<td>'+j+'*'+i+'='+j*i+'</td>'
+                }
+                s+='</tr>'
+            }
+            s+='</table>'
+            document.write(s)
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5번</title>
+    <script>
+        var p = 0;
+        function clic(param) {
+           
+            if(param.checked)p+=parseInt(param.value)
+            else p-=parseInt(param.value)
+
+            document.getElementById('price').value=p;
+        }
+    </script>
+</head>
+<body>
+    <h2>물품을 선택하면 금액이 자동 계산됩니다</h2>
+    <hr>
+    <form id='fo'>
+        <input type="checkbox" value="10000" onchange="clic(this)">모자 1만원
+        <input type="checkbox" value="30000" onchange="clic(this)">구두 3만원
+        <input type="checkbox" value="80000" onchange="clic(this)">명품가방 8만원
+    </form>
+    지불하실 금액 <input id="price" type="text" value="0">
+</body>
+</html>

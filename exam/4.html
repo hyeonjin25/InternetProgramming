@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4번</title>
+    <style>
+        #par p{background-color: greenyellow;}
+    </style>
+    <script>
+        var go = true;
+        function stop() {
+            if(go){
+                document.getElementById('clock').style.backgroundColor='lightgrey'
+                go=false
+                cloc();
+            }else{ 
+                document.getElementById('clock').style.backgroundColor='white'
+                go=true
+                cloc()
+            }
+        }
+
+        function clic() {
+            var t = prompt('중간고사 시험시 유의사항을 입력하세요.')
+            var par = document.getElementById('par')
+            var n = document.createElement('p')
+            n.innerHTML=t
+            par.appendChild(n)
+        }
+    </script>
+</head>
+<body>
+    <h2>시간을 보여주는 영역입니다.</h2>
+    <p>시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작합니다.</p>
+    <hr>
+    <input id="clock" onclick="stop()">
+    <script>
+        function cloc() {
+            if(go){       
+                var today = new Date();
+                var s ='';
+                if(today.getHours()<12){
+                    s+='오전 '
+                }else{ s+= '오후 '}
+                
+                s+= today.getHours()+':'
+                s+= today.getMinutes()+':'
+                s+= today.getSeconds()
+
+                document.getElementById('clock').value=s;
+                
+                    setTimeout('cloc()',1000)
+                }
+            }
+            cloc();
+    </script>
+    <hr>
+    <h2>중간고사 시험 유의사항</h2>
+    <hr>
+    <div id="par" onclick="clic()">
+        <p>A.결과물은 1.html, 2.html, 3.html 파일을 elearning 시스템의 중간고사 제출 항목에 제출</p>
+    </div>
+</body>
+</html>

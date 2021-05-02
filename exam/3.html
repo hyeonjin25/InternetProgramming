@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3번</title>
+    <script>
+        count=0;
+        function clic() {
+            count++
+            var p = document.getElementById('par')
+            var n = document.createElement('tr')
+
+            var s = ''
+            s+='<tr>'
+            s+='<td>row '+count+',cell1</td><td>row '+count+',cell2</td>'
+            s+='</tr>'
+            n.innerHTML=s
+            p.appendChild(n)
+            
+        }
+        function dele() {
+            var par = this.parentElement();
+            par.removeChild();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="clic()">add_new_row</button>
+    <button onclick="dele()">delete_last_row</button>
+    <table border="1px" id="par">
+        <tr style="background-color: green;">
+            <th>Header1</th>
+            <th>Header2</th>
+        </tr>
+    </table>
+</body>
+</html>
