@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function init() {
+            var sel = document.getElementById('sel')
+            var i=document.getElementById('imgs')
+            i.src=sel.options[sel.selectedIndex].value;
+            i.onload=function(){
+                 var s=document.getElementById('sizes')
+            s.innerHTML=i.width+'x'+i.height;
+            }
+           
+        }
+        
+    </script>
+</head>
+<body onload="init()">
+    <form>
+        <select name="" id="sel" onchange="init()">
+            <option value="banana.jfif">바나나</option>
+            <option value="apple.jfif">사과</option>
+            <option value="mango.jfif">망고</option>
+        </select>
+    </form>
+    <div id='sizes'></div>
+    <img src="banana.jfif" id="imgs">
+</body>
+</html>
