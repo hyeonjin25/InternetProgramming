@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        var b= false;
+        function cli() {
+            if(b){
+                var s=document.getElementsByTagName('span');
+                for(i=0; i<s.length;i++){
+                    s[i].style.visibility='hidden'
+                }
+                var b=false;
+            }
+            else{
+                var s=document.getElementsByTagName('span');
+                for(i=0; i<s.length;i++){
+                    s[i].style.visibility='visible'
+                }
+                var b=true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="cli()">클릭</button>
+    i <span>miss</span> you
+    i <span>love</span> you
+</body>
+</html>

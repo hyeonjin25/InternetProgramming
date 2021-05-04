@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id='d'>
+    <script>
+            var d = new Date();
+
+            document.write('현재시간:'+d.getHours()+'시')
+
+            if(d.getHours()<12){
+                document.getElementById('d').style.backgroundColor='lightskyblue';
+            }
+            else{
+                document.getElementById('d').style.backgroundColor='orange';
+            }
+    </script>
+</body>
+</html>
