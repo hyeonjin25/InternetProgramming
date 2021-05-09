@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>학생 정보 입력 예제</title>
+</head>
+<body>
+	<h2>학생 정보 입력</h2>
+	<form method="post" action="request.jsp">
+		성명 :
+		<input type="text" name="name">
+		<p>
+			학번 :
+			<input type="text" name="studentNum">
+		<p>
+			성별: 남자
+			<input type="radio"  name="sex"  value="man" checked>
+			여자
+			<input type="radio" name="sex"  value="woman">
+		<p>
+			국적 :
+			<select name="country">
+				<option selected value="대한민국">대한민국</option>
+				<option value="싱가포르">싱가포르</option>
+				<option value="호주">호주</option>
+				<option value="미국">미국</option>
+			</select>
+		<p>
+			<input type="submit" value="보내기">
+	</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예제 request2</title>
+</head>
+<body>
+	<h2>학생 정보 입력</h2>
+	<form action="request2.jsp" method="post">
+		학번 :
+		<input type="text" name="studentNum">
+		<p>
+			전공 :
+			<select multiple name="major">
+				<option selected value="컴퓨터공학과">컴퓨터공학과</option>
+				<option value="국문과">국문과</option>
+				<option value="기계공학과">기계공학과</option>
+				<option value="간호학과">간호학과</option>
+				<option value="경영학과">경영학과</option>
+			</select>
+		<p>
+			<input type="submit" value="보내기">
+	</form>
+</body>
+</html>
