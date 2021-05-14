@@ -21,7 +21,6 @@
 	<input type="checkbox" name="subject" value="오라클실무">오라클실무<br>
 	<input type="checkbox" name="subject" value="ERP구축">ERP구축<p>
 	<input type="submit" value="확인">
-	<input type="reset" value="취소>
 </form>
 </body>
 </html>
