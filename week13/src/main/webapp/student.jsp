@@ -8,11 +8,10 @@
 </head>
 <body>
 	<h2>JavaBean StudentBean을 이용한 예제</h2>
-	
 	<%
 	request.setCharacterEncoding("utf-8");
 	%>
-	<jsp:useBean id="student" class="com.so.model.StudentBean" scope="page" />
+	<jsp:useBean id="student" class="com.so.model.Student" scope="page" />
 
 	<hr>
 	<h3>폼에서 전달받은 이름과 성적을 JavaBeans GradeBean에 저장</h3>
